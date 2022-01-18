@@ -1,0 +1,44 @@
+<!--Rajesh Saha-->
+<div class="bg-image">
+    <form [formGroup]="onLoginForm" (submit)="authorizeLogin()"  class="list-form" >
+      <div class="imgcontainer">
+        <img src="assets/img/test.png" alt="bizCrm" class="avatar">
+      </div>
+      <ion-card>
+      <div class="container">
+        <!-- <label for="uname"><b>Url</b></label>
+        <input type="text" [(ngModel)]="loginData.url" formControlName="url" border-color="light" clearInput>
+        <p ion-text *ngIf="onLoginForm.get('url').touched && onLoginForm.get('url').hasError('required')">
+            <ion-text color="danger">
+             Please enter url
+            </ion-text>
+      </p> -->
+
+        <label for="uname"><b>Username</b></label>
+        <input type="text" [(ngModel)]=" loginData.username" formControlName="username" border-color="light" clearInput>
+  <p ion-text *ngIf="onLoginForm.get('url').touched && onLoginForm.get('url').hasError('required')" >
+        <ion-text color="danger">
+         Please enter username
+        </ion-text>
+  </p>
+    
+        <label for="psw"><b>Password</b></label>
+        <input type="password" [(ngModel)]=" loginData.password" formControlName="password" clearInput>
+  <p ion-text color="danger"
+      *ngIf="onLoginForm.get('password').touched && onLoginForm.get('password').hasError('required')" >
+      <ion-text color="danger">
+        Please enter password
+      </ion-text>
+    </p>
+            
+    <button  size="medium"color="primary" class="login" type="submit" tappable> LOGIN </button> 
+    
+      </div>                                                                                                                                                                                                                      
+    </ion-card>
+      <!-- <div class="container" style="background-color:#f1f1f1">
+          <span class="psw">Forgot <a href="#">password?</a></span>                                             
+          <p class="cancelbtn"> Copyright@BizTechnosys 2019</p>
+      </div> -->
+    </form>
+  </div>
+<!--Rajesh Saha-->

@@ -1,0 +1,105 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+// setting page css all color
+ion-title{
+    color: white;
+}
+ion-menu-button{
+    color: white;
+}
+ion-icon{
+    color: white;
+}
+
+// All Details View Page Css
+ion-card{
+    padding: 12px;
+}
+.label{
+    font-size: 16px;
+}
+.box{
+    margin-top: -20px;
+}
+.value{
+    padding-left: 150px;font-size: 14px;
+}
+// End Details View Page Css
+
+// All listing Page Css
+
+// add buttton
+.addbutton{
+    position: fixed !important;
+}
+// Loader
+ion-spinner  {
+    // stroke: #ff0000;
+    // fill: #8b0000;
+    position: fixed;
+    z-index: 999;
+    height: 5em;
+    width: em;
+    overflow: show;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  // this is all listing module item slide divider color "BLACK"
+  .vl {
+    border-left: 2px solid black;
+    height: 150px;
+  }
+  // hyper link each item
+.alllink{
+    text-decoration-line: none;
+    font-size: 15px;
+    color: inherit;
+}
+.amount{
+    margin-top: -45px;
+    margin-left: 240px; 
+    position:relative;
+}
+.email{
+    margin-top: -10px;
+    padding: 8px;
+    color:#1e51c7;
+}
+
+.field{
+    padding-left: 120px;
+  }
+
+#ptag{
+margin-top: -20px;
+}
+// End listing Page Css

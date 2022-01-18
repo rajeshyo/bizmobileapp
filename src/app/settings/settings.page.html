@@ -1,0 +1,71 @@
+<!--Rajesh Saha-->
+<ion-header>
+  <ion-toolbar color="primary">
+     <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+     </ion-buttons>
+     <ion-title>
+        Settings
+     </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card class="card">
+     <ion-card-header>
+        <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+        <ion-card-title>Theme Color</ion-card-title>
+     </ion-card-header>
+     <!--Rajesh Saha-->
+     <br>
+     <ion-card-content >
+        <button class="firstcolorbutton"  (click)="changeTheme('autumn')"></button>&nbsp;
+        <button  class="secoundcolorbutton"  (click)="changeTheme('night')"></button>&nbsp; <br>
+        <button class="thirdcolorbutton" (click)="changeTheme('neon')"></button>&nbsp;
+        <button class="fourthcolorbutton" (click)="changeTheme('')"></button>
+     </ion-card-content>
+  </ion-card>
+  <div class="main">
+     <!-- <a routerLink="/manage-users" class="settingbutton">
+        <div class="link">
+           <img src="assets/img/setting/manageuser.png" > &nbsp; &nbsp;
+           Manage Users
+           <img src="assets/img/setting/leftarrow.png"  class="leftarrow">
+        </div>
+     </a>
+     <br>
+     <a routerLink="/password" class="settingbutton">
+        <div class="link">
+           <img src="assets/img/setting/forgotpass.png" > &nbsp; &nbsp;
+           Change Password
+           <img src="assets/img/setting/leftarrow.png" class="leftarrow">
+        </div>
+     </a>
+     <br>
+     <a routerLink="/barcode" class="settingbutton">
+        <div class="link">
+           <img src="assets/img/setting/barcode.png" > &nbsp; &nbsp;
+           Barcode Scanner
+           <img src="assets/img/setting/leftarrow.png" class="leftarrow">
+        </div>
+     </a>
+     <br>
+     <a routerLink="/energycalculator" class="settingbutton">
+        <div class="link">
+           <img src="assets/img/setting/cal.png" > &nbsp; &nbsp;
+           Energycalculator
+           <img src="assets/img/setting/leftarrow.png" class="leftarrow">
+        </div>
+     </a>
+     <br> -->
+     <a  (click)="logout()" tappable class="settingbutton">
+        <div class="link">
+           <img src="assets/img/setting/logout.png" > &nbsp; &nbsp;
+           Logout
+           <img src="assets/img/setting/leftarrow.png" class="leftarrow">
+        </div>
+     </a>
+  </div>
+  <hr>
+  <br>
+     <!--Rajesh Saha-->
+</ion-content>

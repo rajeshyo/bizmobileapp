@@ -1,0 +1,78 @@
+<ion-app>
+  <ion-split-pane contentId="main">
+    <ion-menu contentId="main" type="overlay">
+        <ion-header >
+           <ion-toolbar color="primary">
+              <div class="user" *ngIf="moduledata">
+                 <ngx-avatar size="50" [round]="true" class="my-avatar" [name]=" moduledata.first_name.charAt(0).toUpperCase()"></ngx-avatar>
+                 <ion-title >{{ moduledata.first_name}} {{ moduledata.last_name}}
+                 </ion-title>
+              </div>
+           </ion-toolbar>
+        </ion-header>
+        <!--Rajesh Saha-->
+        <ion-content>
+           <div class="nav" >
+              <input type="checkbox" id="menu" />
+              <label for="menu" id="nav-icon"></label>
+              <div class="multi-level" >
+                 <ion-menu-toggle auto-hide="false">
+                    <a routerLink="/home" class="menulink">
+                       <div class="item">
+                          <input type="checkbox" id="C"/>
+                          <img src="../assets/img/Arrow.png" class="arrow"><label for="C">Home</label>                   
+                          <!-- <ul>
+                             <li><a href="#">Our Team</a></li>
+                             <li><a href="#">Clients</a></li>  
+                             <li><a href="#">Our Work</a></li>
+                             </ul> -->
+                       </div>
+                    </a>
+                    <a routerLink="/dashboard" class="menulink">
+                       <div class="item">
+                          <input type="checkbox" id="d"/>
+                          <img src="../assets/img/Arrow.png" class="arrow"><label for="d">Dashboard</label>                   
+                       </div>
+                    </a>
+                    <!-- <a routerLink="/tabs/calender"class="menulink">
+                       <div class="item">
+                          <input type="checkbox" id="d"/>
+                          <img src="../assets/img/Arrow.png" class="arrow"><label for="d">Calender</label>                   
+                       </div>
+                    </a> -->
+                 </ion-menu-toggle>
+                 <div class="item" *ngFor="let p of menu; let i = index">
+                    <input type="checkbox" id="{{i}}"/>
+                    <img src="../assets/img/Arrow.png" class="arrow" ><label for="{{i}}">{{p.menuname |titlecase}}</label>
+                    <ul *ngFor="let items of p.menu">
+                       <ion-menu-toggle auto-hide="false">
+                          <label *ngFor="let md of modules">
+                          <li [routerDirection]="'root'" [routerLink]="['/leads/'+md.name]" *ngIf="md.name == items.title">
+                          <img src="../assets/img/setting/leftarrow.png" style="height: 20px;margin-left: 50px;">
+                          <a href="#">{{items.title}}</a>
+                          </li>
+                          </label>  
+                       </ion-menu-toggle>
+                    </ul>
+                 </div>
+                 <ion-menu-toggle auto-hide="false">
+                    <!-- <a routerLink="/settings"class="menulink">
+                       <div class="item">
+                          <input type="checkbox" id="d"/>
+                          <img src="../assets/img/Arrow.png" class="arrow"><label for="d">Settings</label>                   
+                       </div>
+                    </a> -->
+                 </ion-menu-toggle>
+              </div>
+           </div>
+           <ion-fab vertical="bottom" class="addbutton" horizontal="end" slot="fixed">
+              <ion-button icon-left (click)="logout()" expand="full" color="danger"  tappable>
+                 <ion-icon name="log-out"></ion-icon>
+              </ion-button>
+           </ion-fab>
+        </ion-content>
+        <!--Rajesh Saha-->
+     </ion-menu>
+     <ion-router-outlet id="main"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

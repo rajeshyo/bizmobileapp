@@ -1,0 +1,98 @@
+form {border: 13px  rgba(0,0,0, 0.4);}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+.login{
+  background-image: linear-gradient(to right, #60f0e7, #49e5f1, #44d8f8, #52cbf9, #69bcf5, #69bcf5, #69bcf5, #69bcf5, #52cbf9, #44d8f8, #49e5f1, #60f0e7);
+  border-radius: 8px;
+  color: black;
+  font-size: 20px;
+  font-weight: 200px;
+  font-weight: 700;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 10%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+  
+}
+@media screen and (min-width: 100px) {
+  img.avatar {
+    width: 18%;
+    border-radius: 50%;
+  }
+}
+b{
+  color:white;
+}
+// ion-content{
+//   // --ion-background-color:rgb(95, 95, 95);
+//   --background: url(../../assets/img/blur_login.jpg);
+//     --background-repeat: no-repeat;
+//     --background-size: cover;  
+//   filter: blur(8px);
+//   -webkit-filter: blur(8px);
+// }
+
+.bg-image {
+  /* The image used */
+  background-image: url(../../assets/img/blur_login.jpg);
+
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

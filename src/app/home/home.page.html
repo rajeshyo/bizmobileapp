@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar color="primary">
+     <ion-buttons slot="start" class="menu">
+        <ion-menu-button></ion-menu-button>
+     </ion-buttons>
+     <ion-title>
+        Home
+     </ion-title>
+  </ion-toolbar>
+</ion-header>
+<!--Rajesh Saha-->
+<!-- <ion-toolbar>
+  <ion-searchbar animated style="color:black;"></ion-searchbar>
+</ion-toolbar> -->
+<ion-content>
+  <ion-spinner  *ngIf="showSpinner" color="primary" name="lines" class="addbutton" ></ion-spinner>
+  <ion-grid style="background-color: #3f9dfd;">
+     <ion-row>
+        <ion-col size="4" *ngFor="let module of modules;let i = index">
+           <div class="main" text-center (click)="formlink(module.name,module.id)" >
+              <!-- <br><ion-icon name="albums-outline"></ion-icon> -->
+              <div *ngFor="let module1 of allmodulename;let i = index">
+                 <!-- <div *ngIf="module.name===module1.title"> -->
+                    <!-- <div class="{{module1.icon}} icon">
+                    </div> -->
+                    <!-- <img *ngIf="module.name===module1.title" 
+                    src="../../assets/img/logo/{{module1.title}}.png" alt = "Missing Image"> -->
+
+                    <!-- <span *ngIf="module.name===module1.title">
+                     <img class="img" src="../../assets/img/logo/{{module1.title}}.png"alt = "image" *ngIf="module1.title"  />
+                     <img class="img" src="../../assets/img/logo/defualt.png"alt = "Missing Image" *ngIf="!module1.title" />
+                    </span> -->
+                    
+                 <!-- </div> -->
+              </div>
+              <p class="title"> <b>{{ module.label }} </b> </p>
+
+           </div>
+        </ion-col>
+     </ion-row>
+  </ion-grid>
+  <!--Rajesh Saha-->
+</ion-content>

@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar color="primary">
+     <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+     </ion-buttons>
+     <ion-title>
+        Services
+        <ion-icon name="refresh" (click)="refresh($event)" float-right></ion-icon>
+     </ion-title>
+  </ion-toolbar>
+</ion-header>
+<!--Rajesh Saha-->
+<br>
+<ion-content>
+  <ion-spinner  *ngIf="showSpinner" color="primary" name="lines" class="addbutton" ></ion-spinner>
+  <ion-fab vertical="bottom" class="addbutton" horizontal="end" slot="fixed">
+     <a routerLink="/servicesform" >
+        <ion-fab-button>
+           <ion-icon name="add" style="color:white;"></ion-icon>
+        </ion-fab-button>
+     </a>
+  </ion-fab>
+  <ion-item-sliding #slidingItem id="item100" *ngFor="let lead of modules;let i = index" style="background-color:#0ab22a;">
+     <ion-item>
+        <div *ngFor="let field of lead.blocks;let i = index">
+           <div *ngFor="let fieldsdt of field.fields;let i = index">
+              <a routerLink="/servicesdetails/{{ lead.id }}" class="alllink" >
+                 <ion-label >
+                    <div>
+                       <p *ngIf="fieldsdt.name =='servicename'">Service Name:</p>
+                       <p *ngIf="fieldsdt.name =='servicename'" id="ptag" class="field">{{ fieldsdt.value }}</p>
+                    </div>
+                    <div>
+                       <p *ngIf="fieldsdt.name =='service_no'">Service No:</p>
+                       <p *ngIf="fieldsdt.name =='service_no'" id="ptag" class="field">{{ fieldsdt.value |titlecase}} </p>
+                    </div>
+                 </ion-label>
+              </a>
+           </div>
+        </div>
+     </ion-item>
+     <ion-item-options side="end">
+        <ion-button fill="clear" (click)="slidingclose(slidingItem)" (click)="servicesdeleteList(lead.id)" (click)="refresh($event)" style="height: 48px;" >
+        <ion-icon slot="icon-only" color="danger" name="trash" size="small"></ion-icon>
+        </ion-button> 
+        <div class="vl"></div>
+        <ion-button fill="clear" (click)="slidingclose(slidingItem)"  routerLink="/servicesform/{{ lead.id }}" style="height: 48px;">
+           <ion-icon color="warning" slot="icon-only" name="create" size="small" ></ion-icon>
+        </ion-button>
+     </ion-item-options>
+  </ion-item-sliding>
+  <!--Rajesh Saha-->
+</ion-content>

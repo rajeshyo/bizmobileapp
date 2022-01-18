@@ -1,0 +1,16 @@
+ion-col > div {
+  background-color: #f7f7f7;
+  border: solid 1px #ddd;
+  padding: 10px;
+}
+
+// scss 
+$font-size:30px;
+
+
+.title{
+  font-size: $font-size - 10;
+}
+.title b{
+  font-size: $font-size;
+}

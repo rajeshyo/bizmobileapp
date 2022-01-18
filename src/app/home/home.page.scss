@@ -1,0 +1,91 @@
+// ion-content{
+//   --ion-background-color: rgba(223, 226, 226, 0.836);
+// }
+.masters {
+  background-color: rgb(248, 246, 246);
+  border-radius: 10%;
+  margin: 9px;
+  color:black;
+}
+.icon{
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 80px;
+  margin-top: -10px;
+}
+.title{
+  color:black; 
+  font-size: 13px;
+  margin-top: 0px;
+  text-align: center;
+  padding: 15px;
+}
+.main{
+  box-shadow: 6px 9px 29px 7px #becfef;
+  font-size: 12px;
+  width: 100%;
+  border-radius: 9px;
+  height: 90px;
+  background: rgba(57, 155, 255, 0.94);
+  // background-image: linear-gradient(to right, #60f0e7, #49e5f1, #44d8f8, #52cbf9, #69bcf5, #69bcf5, #69bcf5, #69bcf5, #52cbf9, #44d8f8, #49e5f1, #60f0e7);
+
+}
+
+
+// Home module logo
+// .aica_1211264-200, .aica_accounts, .aica_assets, .aica_calender, .aica_campaigns, 
+// .aica_contacts, .aica_customlogin, .aica_documents, .aica_emails, .aica_faq, 
+// .aica_helpdesk, .aica_invoices, .aica_leads, .aica_modcomments, .aica_payment, 
+// .aica_pbxmanager, .aica_pricebook, .aica_products, .aica_project, .aica_projectmilestone, 
+// .aica_projecttasks, .aica_purchaseorder, .aica_quotes, .aica_salesorder, .aica_services, 
+// .aica_servicescontacts, .aica_smsnotifier, .aica_vendors, .aica_abc
+// { display: inline-block; background: url('../../assets/img/allmodule.png') no-repeat;  overflow: hidden; text-indent: -9999px; text-align: left; }
+ 
+// .aica_1211264-200 { background-position: -5px -0px; width: 200px; height: 200px; }
+// .aica_opportunities {background-image: url('../../assets/img/logo/opportunities.png')  }
+// .aica_accounts {background-image: url('../../assets/img/logo/accounts.png')  }
+// .aica_abc {background-image: url('../../assets/img/logo/opportunities.png')  }
+// .aica_assets { background-image: url('../../assets/img/logo/assets.png')}
+// .aica_calender { background-image: url('../../assets/img/logo/calender.png') }
+// .aica_campaigns { background-image: url('../../assets/img/logo/campaigns.png') }
+// .aica_contacts { background-image: url('../../assets/img/logo/contacts.png') }
+// .aica_customlogin { background-image: url('../../assets/img/logo/customlogin.png') }
+// .aica_documents { background-image: url('../../assets/img/logo/documents.png') }
+// .aica_emails { background-image: url('../../assets/img/logo/emails.png') }
+// .aica_faq { background-image: url('../../assets/img/logo/faq.png') }
+// .aica_helpdesk { background-image: url('../../assets/img/logo/helpdesk.png') }
+// .aica_invoices { background-image: url('../../assets/img/logo/invoices.png') }
+// .aica_leads { background-image: url('../../assets/img/logo/leads.png') }
+// .aica_modcomments { background-image: url('../../assets/img/logo/modcomments.png') }
+// .aica_payment { background-image: url('../../assets/img/logo/payment.png') }
+// .aica_pbxmanager { background-image: url('../../assets/img/logo/pbxmanager.png') }
+// .aica_pricebook { background-image: url('../../assets/img/logo/pricebook.png') }
+// .aica_products { background-image: url('../../assets/img/logo/products.png') }
+// .aica_project { background-image: url('../../assets/img/logo/project.png') }
+// .aica_projectmilestone {background-image: url('../../assets/img/logo/projectmilestone.png') }
+// .aica_projecttasks { background-image: url('../../assets/img/logo/projecttasks.png') }
+// .aica_purchaseorder { background-image: url('../../assets/img/logo/purchaseorder.png') }
+// .aica_quotes { background-image: url('../../assets/img/logo/quotes.png') }
+// .aica_salesorder { background-image: url('../../assets/img/logo/salesorder.png') }
+// .aica_services { background-image: url('../../assets/img/logo/services.png') }
+// .aica_servicescontacts { background-image: url('../../assets/img/logo/servicescontacts.png') }
+// .aica_smsnotifier { background-image: url('../../assets/img/logo/smsnotifier.png') }
+// .aica_vendors { background-image: url('../../assets/img/logo/vendors.png') }
+// End home module logo
+
+// loader
+ion-spinner  {
+    // stroke: #ff0000;
+    // fill: #8b0000;
+    position: fixed;
+    z-index: 999;
+    height: 5em;
+    width: em;
+    overflow: show;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  // End loader

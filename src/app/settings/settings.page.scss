@@ -1,0 +1,74 @@
+    
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spin {
+    animation: spin var(--speed) linear infinite;
+}
+
+ion-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+svg {
+    width: 500px;
+}
+.settingbutton{
+    text-decoration: none;
+}
+.link{
+  border-style: solid;
+  box-shadow: 0px 0px 3px 3px #ccc;
+  border-color: snow;
+  padding:10px;
+  background-color: #fff;
+}
+.main{
+    padding:20px;
+}
+.card{
+    background-color: #fff; 
+     border-left: 6px solid green;
+     height: 110px; 
+     box-shadow: 0px 0px 3px 3px #ccc;
+}
+// This height and width scss variable
+$height: 40px;
+$width: 50px;
+.firstcolorbutton{
+    height: $height; 
+    background-color: #1C2760;
+    width: $width; 
+    border: 1px solid black;
+}
+.secoundcolorbutton{
+    height: $height; 
+    background-color: #454545;
+     width: $width;
+      border: 1px solid black;
+}
+.thirdcolorbutton{
+    height: $height;
+     background-color: #689F38; 
+     width: $width; 
+     border: 1px solid black;
+}
+.fourthcolorbutton{
+    height: $height; 
+    background-color: #0277BD; 
+    width: $width;
+    border: 1px solid black;
+}
+$height1:20px;
+img{
+    height: $height1;
+}
+
+.leftarrow{
+    float:right;
+}

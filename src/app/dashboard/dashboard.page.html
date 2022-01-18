@@ -1,0 +1,63 @@
+<ion-header>
+      <ion-toolbar color="primary">
+         <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+         </ion-buttons>
+         <ion-title>
+            Dashboard
+         </ion-title>
+         <ion-icon name="pulse" (click)="showChart()" size="large" slot="end"></ion-icon>
+         <!-- <ion-button fill="clear" size="small" slot="end" (click)="presentActionSheet()">
+            <ion-icon ios="ios-notifications" md="md-notifications"></ion-icon>
+         </ion-button> -->
+         <ion-button routerLink="/profile" fill="clear"  size="small" slot="end">
+            <ion-icon ios="ios-person" md="md-person"></ion-icon>
+         </ion-button>
+      </ion-toolbar>
+   </ion-header>
+   <!--Rajesh Saha-->
+   <!-- <ion-toolbar>
+      <ion-searchbar></ion-searchbar>
+   </ion-toolbar> -->
+   <ion-content>
+         <ion-grid>
+               <ion-row>
+                     <ion-col>
+                       <div *ngIf="opportunities" class="title"> <b style="color: coral;">{{ opportunities.length }}</b> <br> Opportunities</div>
+                     </ion-col>
+                     <ion-col>
+                       <div *ngIf="projects" class="title"> <b style="color: blue;">{{ projects.length }}</b> <br> Company</div>
+                     </ion-col>
+                   </ion-row>
+
+                   <ion-row>
+                     <ion-col>
+                       <div *ngIf="paments" class="title"> <b style="color: brown;">{{ paments.length }}</b> <br> Vendors</div>
+                     </ion-col>
+                     <ion-col>
+                       <div *ngIf="projectstasks" class="title"> <b style="color: green;">{{ projectstasks.length }}</b> <br> PriceBooks</div>
+                     </ion-col>
+                   </ion-row>
+
+                   <ion-row>
+                     <ion-col>
+                       <div *ngIf="salesorder" class="title"> <b style="color: red;">{{ salesorder.length }}</b> <br> Salesorder</div>
+                     </ion-col>
+                     <ion-col>
+                       <div *ngIf="contact" class="title"> <b>{{ contact.length }}</b> <br> Contact</div>
+                     </ion-col>
+                   </ion-row>
+               </ion-grid>
+
+
+      <!-- <ion-grid >
+          
+       <ion-row>
+         <ion-col size="12" >
+            <h6>Graph Chart</h6>
+            <div id="chart_div" align="center" ></div>
+         </ion-col>
+      </ion-row>
+   </ion-grid> -->
+  </ion-content>
+  <!--Rajesh Saha-->
