@@ -20,7 +20,7 @@ export class RelationPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.check()
+    // this.check()
   }
 
 
