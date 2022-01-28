@@ -53,6 +53,10 @@ const routes: Routes = [
     path: 'relation',
     loadChildren: () => import('./relation/relation.module').then( m => m.RelationPageModule)
   },
+  {
+    path: 'relation/:id',
+    loadChildren: () => import('./relation/relation.module').then( m => m.RelationPageModule)
+  },
 ];
 
 @NgModule({

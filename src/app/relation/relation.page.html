@@ -1,12 +1,18 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Relation</ion-title>
+  <ion-toolbar color="primary">
+     <ion-title>
+        <a routerLink="/leads/{{moduleid}}">
+           <ion-icon name="arrow-back" ></ion-icon>
+        </a>
+        &nbsp;&nbsp;&nbsp;
+       Relation
+     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-<h1>Relation</h1>
-<button (click)="check()">Check</button>
+<!-- <h1>Relation</h1> -->
+<!-- <button (click)="check()">Check</button> -->
 
 <div *ngFor="let a of modules;let i = index">
   <div *ngFor="let b of a.blocks;let i = index">

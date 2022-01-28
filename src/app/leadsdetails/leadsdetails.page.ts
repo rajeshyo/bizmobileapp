@@ -13,7 +13,7 @@ export class LeadsdetailsPage implements OnInit {
 
 // constructor() { }
 mainmodulename: any;
-
+moduleiddata: any;
 moduleid: any;
 data: any;
 modules = [];
@@ -57,7 +57,7 @@ const modulename:any = JSON.parse(localStorage.getItem('modulesname'));
   this.relatedmodule();
 
   this.profileList();
-
+  this.moduleidpass();
 
  }
  
@@ -111,7 +111,7 @@ profileList() {
       if (this.data.success === true) {
         this.modules = this.data.result.record.blocks;
         // console.log('SSSSSS');
-        // console.log(this.modules);
+        // console.log(this.data.result.record.id);
         return this.modules;
       } else {
         console.log(this.data.result.error);
@@ -120,7 +120,64 @@ profileList() {
       console.log(err);
     });
 }
+moduleidpass() {
+  console.log("moduleid",this.j)
 
+    this.route.paramMap.subscribe(params => {
+    this.id = params.get('id');
+  });
+  // const modulename:any = JSON.parse(localStorage.getItem('modulesname'));
+    const loginData = JSON.parse(localStorage.getItem('logindata'));
+    // console.log("mname",modulename)
+     
+    // if(modulename.name==this.mainmodulename){
+    //   console.log("opiddd",modulename.id)
+    // }else{
+    //   console.log("nnnnn")
+    // }
+    
+
+    // for (let x of modulename) {
+    //   //  console.log("listm",x.name)
+    //    if(this.mainmodulename===x.name){
+    //        console.log("moduleid",x.id)
+    //        return x.id
+    //    }
+      
+    //   }
+ 
+ 
+    
+     
+
+    const session = localStorage.getItem('session');
+    const record = this.j+"x"+this.moduleid;
+    const options = this.moduleService.callHeader();
+    const getServiceData = {
+      url : loginData.url,
+      session,
+      // record : this.id,
+      module :  this.mainmodulename,
+      operation: 'fetchRecordWithGrouping'
+
+   };
+
+    this.moduleService.getservicesListSync(getServiceData, record).subscribe(res => {
+      this.data = res;
+      this.showSpinner = false;
+      // console.log(this.data);
+      if (this.data.success === true) {
+        this.moduleiddata = this.data.result.record;
+        // console.log('SSSSSS');
+        // console.log(this.data.result.record.id);
+        return this.moduleiddata;
+      } else {
+        console.log(this.data.result.error);
+      }
+    }, (err) => {
+      console.log(err);
+    });
+}
 relatedmodule() {
 
   // const modulename:any = JSON.parse(localStorage.getItem('modulesname'));
@@ -155,6 +212,9 @@ relatedmodule() {
     });
 }
 
+relatediddatapass(modulename: string,moduleid: string,){
+  this.router.navigateByUrl('relation?id='+moduleid+'&name='+modulename);
+}
 form(mainmodulename: StringConstructor){
   this.router.navigateByUrl('leadform?name='+mainmodulename);
 }

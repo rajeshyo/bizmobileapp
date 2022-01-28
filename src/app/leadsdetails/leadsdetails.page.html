@@ -11,11 +11,21 @@
 </ion-header>
 <!--Rajesh Saha-->
 <ion-content>
-  <div *ngFor="let rdata of relatedmodules;let i = index">
+  <!-- <div *ngFor="let rdata of relatedmodules;let i = index">
    
    <a routerLink="/leads/{{rdata.modulename}}" *ngIf="rdata.actions =='select'">{{rdata.label}}</a>
-   <!-- <a routerLink="/leads/{{rdata.modulename}}" *ngIf="rdata.actions =='add'">{{rdata.label}}</a> -->
+ 
 <p (click)="form(rdata.modulename)" *ngIf="rdata.actions =='add'">{{rdata.label}}</p>
+  </div> -->
+
+  <div *ngFor="let rdata of relatedmodules;let i = index">
+   
+   <!-- <a routerLink="/leads/{{rdata.modulename}}" >{{rdata.label}}</a> -->
+   <!-- <a routerLink="/leads/{{rdata.modulename}}" *ngIf="rdata.actions =='add'">{{rdata.label}}</a> -->
+  
+      <p (click)="relatediddatapass(moduleiddata.id,rdata.modulename)" >{{rdata.label}}</p>
+
+
   </div>
   <span *ngFor="let lead of modules;let i = index">
      <ion-card>

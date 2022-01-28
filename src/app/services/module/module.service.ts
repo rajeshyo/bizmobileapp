@@ -66,8 +66,8 @@ export class ModuleService {
     // formdata.append('username', moduledata.username);
     // formdata.append('password', moduledata.password);
     formdata.append('_session', moduledata.session);
-    formdata.append('record', '10x7925');
-    formdata.append('relatedmodule', 'Products');
+    formdata.append('record', moduledata.record);
+    formdata.append('relatedmodule', moduledata.relatedmodule);
 
     let url = environment.baseurl
     // http://realestatedemo.biztechnosys.com/
