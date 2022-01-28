@@ -144,8 +144,8 @@ relatedmodule() {
       // console.log(this.data);
       if (this.data.success === true) {
         this.relatedmodules = this.data.result.relatedModules;
-        console.log('relatedmodule');
-        console.log(this.relatedmodules);
+        // console.log('relatedmodule');
+        // console.log(this.relatedmodules);
         return this.relatedmodules;
       } else {
         console.log(this.data.result.error);

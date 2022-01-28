@@ -95,15 +95,15 @@ formedit(modulename: string,moduleid: string,){
     this.moduleService.getservicesListSync(getServiceData, options).subscribe(res => {
       this.data = res;
       this.showSpinner = false;
-      console.log('TestData');
-      console.log(this.data);
+      // console.log('TestData');
+      // console.log(this.data);
       if (this.data.success === true) {
         if (this.data.result !== null) {
-          console.log('XXXXyy');
+        
           this.headers = this.data.result.headers;
           this.recordsdata = this.data.result.records;
 
-          console.log(this.modules);
+          // console.log(this.modules);
 
 
           // const array1 = this.modules;
@@ -147,22 +147,22 @@ formedit(modulename: string,moduleid: string,){
       operation: 'deleteRecords'
     };
 
-    console.log(getServiceData);
+    // console.log(getServiceData);
     this.moduleService.getservicesListSync(getServiceData, id1).subscribe(res => {
       //  this.router.navigate(['/leads']);
       this.leadsList();
       this.toastService.presentToast('Delete Successful');
       // location.reload();
-      console.log('hgvhvhv');
-      console.log(this.id);
+      // console.log('hgvhvhv');
+      // console.log(this.id);
     }, (err) => {
     });
   }
   refresh(refresher) {
-    console.log('Begin async operation', refresher);
+    // console.log('Begin async operation', refresher);
 
     setTimeout(() => {
-      console.log('Async operation has ended');
+      // console.log('Async operation has ended');
       this.leadsList();
     }, 50);
   }
@@ -191,9 +191,9 @@ formedit(modulename: string,moduleid: string,){
 
           if (alldata.name === 'firstname') {
             if (alldata.value === 'lkml') {
-              console.log('testdataaafaf');
-              console.log(alldata.value);
-              console.log(lead);
+              // console.log('testdataaafaf');
+              // console.log(alldata.value);
+              // console.log(lead);
               return this.modules;
             }
 

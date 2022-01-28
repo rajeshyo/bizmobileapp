@@ -10,6 +10,7 @@ import { HomeService } from './services/home/home.service';
 // import { Push, PushObject, PushOptions } from '@ionic-native/push/ngx';
 import { IonRouterOutlet } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,9 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   routerOutlet: any;
+  headers: any;
+  recordsdata: any;
+  http: any;
   constructor(
     private platform: Platform,
     private router: Router,
@@ -51,6 +55,11 @@ export class AppComponent {
     {
       title: 'Dashboard',
       url: '/tabs/dashboard',
+      icon: 'list-box'
+    },
+    {
+      title: 'Calender',
+      url: '/calender',
       icon: 'list-box'
     },
     {
@@ -541,16 +550,70 @@ allmoduleList() {
        console.log(err);
     });
   };
+  // testing purpose
+  check() {
+    const loginData = JSON.parse(localStorage.getItem('logindata'));
+    const session = localStorage.getItem('session');
 
+    const options = this.moduleService.callHeader();
+    const getServiceData = {
+      url : loginData.url,
+      username : loginData.username,
+      password : loginData.password,
+      // operation: 'relatedRecordsWithGrouping',
+    
+      session
+    };
+    this.moduleService.getservicesListSync(getServiceData, options).subscribe(res => {
+      this.data1 = res;
+      if (this.data1.success === true ) {
+        console.log(this.data1.result.modules);
+        this.modules = this.data1.result.modules;
+        
+        return this.modules;
+      }
+    }, (err) => {
+       console.log(err);
+    });
+  
+  };
+  // end
   listlink(modulename: string){
   
     this.router.navigate(['/leads/'+modulename]);
     
   }
-  logout() {
+  alogout() {
+    const loginData = JSON.parse(localStorage.getItem('logindata'));
+    const session = localStorage.getItem('session');
+
+    const options = this.moduleService.callHeader();
+    const getServiceData = {
+      url : loginData.url,
+      username : loginData.username,
+      password : loginData.password,
+      operation: 'logout',
+      session
+    };
+    this.moduleService.getservicesListSync(getServiceData, options).subscribe(res => {
+      this.data1 = res;
+      if (this.data1.success === true ) {
+        console.log(this.data1.result.modules);
+        this.modules = this.data1.result.modules;
+        
+        return this.modules;
+      }
+    }, (err) => {
+       console.log(err);
+    });
+    localStorage.clear();
+        this.navCtrl.navigateRoot('/login');
+  };
+  logout1() {
     localStorage.clear();
     this.navCtrl.navigateRoot('/login');
   };
+
 
 // This is back button exit code
 //  async presentAlertConfirm() {

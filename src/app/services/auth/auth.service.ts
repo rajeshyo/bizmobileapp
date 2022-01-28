@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of, throwError } from 'rxjs';
 import { HttpClient, HttpErrorResponse} from '@angular/common/http';
 import { catchError, tap, map, } from 'rxjs/operators';
+import { environment} from '../../../environments/environment'
 
 @Injectable({
   providedIn: 'root'
@@ -29,11 +30,12 @@ export class AuthService {
     formdata.append('_operation','login');
     formdata.append('username',logindata.username);
     formdata.append('password',logindata.password);
+    let url = environment.baseurl
     // http://realestatedemo.biztechnosys.com/
     // http://beml.biztechnosys.com/
     // https://bizuiaccountingcrm.biztechnosys.com/
     // return this.http.post<any>(logindata.url + '/modules/Mobile/api.php', formdata, options).pipe(
-    return this.http.post<any>('https://bizuiaccountingcrm.biztechnosys.com/modules/Mobile/api.php', formdata, options).pipe(
+    return this.http.post<any>(url, formdata, options).pipe(
 
       tap((logindata: any) => console.log(`logindata`)),
       catchError(this.handleError<any>('login'))

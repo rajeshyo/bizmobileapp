@@ -13,10 +13,13 @@
   },
   "private": true,
   "dependencies": {
+    "@angular/animations": "~13.0.0",
+    "@angular/cdk": "^13.1.2",
     "@angular/common": "~13.0.0",
     "@angular/core": "~13.0.0",
     "@angular/forms": "~13.0.0",
     "@angular/http": "^7.2.16",
+    "@angular/material": "^13.1.2",
     "@angular/platform-browser": "~13.0.0",
     "@angular/platform-browser-dynamic": "~13.0.0",
     "@angular/router": "~13.0.0",
@@ -26,6 +29,7 @@
     "httpclient": "^0.1.0",
     "ion2-calendar": "^3.0.0-rc.0",
     "moment": "^2.29.1",
+    "ngx-avatar": "^4.1.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"

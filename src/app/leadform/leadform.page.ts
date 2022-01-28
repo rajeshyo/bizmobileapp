@@ -54,7 +54,7 @@ export class LeadformPage implements OnInit {
     for (let x of modulename) {
      //  console.log("listm",x.name)
       if(this.mainmodulename===x.name){
-         //  console.log("moduleid",x.id)
+          console.log("moduleid",x.id)
         this.j = x.id
          // return j;
       }
@@ -94,7 +94,7 @@ export class LeadformPage implements OnInit {
       this.data = res;
       if (this.data !== null) {
           if (this.data.success === true) {
-              console.log(this.data);
+              // console.log(this.data);
               if (this.data.result.record !== null) {
                 this.editrecord = this.data.result.record;
                 let dataRecieved =Object.keys(this.data.result.record);
@@ -144,7 +144,7 @@ export class LeadformPage implements OnInit {
         this.loaddata =1;
 
         this.modules = this.data.result.describe.fields;
-        console.log("ghdata",this.modules)
+        // console.log("ghdata",this.modules)
  let  test_this = this;      
 const test = "assigned_user_id"
 this.modules.forEach(function (value, i) {
@@ -155,7 +155,7 @@ this.modules.forEach(function (value, i) {
 
 });
 // console.log("jkjk",this.modules.indexOf(test));
-console.log("kvalue",test_this.k)
+// console.log("kvalue",test_this.k)
 
 if(this.k){      
 let ids = Object.keys(this.modules[test_this.k]['type']['picklistValues']['users']);
@@ -171,7 +171,7 @@ let ids = Object.keys(this.modules[test_this.k]['type']['picklistValues']['users
           this.modules['ownerdata'].push(a);
         }
       } 
-        console.log(this.modules);
+        // console.log(this.modules);
         let group={}    
         for(let z=0;z< this.modules.length; z++){
             let label = this.modules[z]['name'];
@@ -191,7 +191,7 @@ let ids = Object.keys(this.modules[test_this.k]['type']['picklistValues']['users
 
 
 onSubmit(form: NgForm) {
-console.log("formdatanew",this.bizFormData)
+// console.log("formdatanew",this.bizFormData)
     const loginData = JSON.parse(localStorage.getItem('logindata'));
     const session = localStorage.getItem('session');
     const options = this.moduleService.callHeader();

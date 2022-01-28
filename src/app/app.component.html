@@ -34,6 +34,12 @@
                           <img src="../assets/img/Arrow.png" class="arrow"><label for="d">Dashboard</label>                   
                        </div>
                     </a>
+                    <a routerLink="/calender" class="menulink">
+                     <div class="item">
+                        <input type="checkbox" id="d"/>
+                        <img src="../assets/img/Arrow.png" class="arrow"><label for="d">Calender</label>                   
+                     </div>
+                  </a>
                     <!-- <a routerLink="/tabs/calender"class="menulink">
                        <div class="item">
                           <input type="checkbox" id="d"/>
@@ -66,10 +72,11 @@
               </div>
            </div>
            <ion-fab vertical="bottom" class="addbutton" horizontal="end" slot="fixed">
-              <ion-button icon-left (click)="logout()" expand="full" color="danger"  tappable>
+              <ion-button icon-left (click)="alogout()" expand="full" color="danger"  tappable>
                  <ion-icon name="log-out"></ion-icon>
               </ion-button>
            </ion-fab>
+      
         </ion-content>
         <!--Rajesh Saha-->
      </ion-menu>

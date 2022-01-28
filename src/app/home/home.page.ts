@@ -166,7 +166,7 @@ export class HomePage implements OnInit {
       this.data = res;
       this.showSpinner = false;
       if (this.data.success === true ) {
-        console.log(this.data.result.modules);
+        // console.log(this.data.result.modules);
         this.modules = this.data.result.modules;
         localStorage.setItem('modulesname', JSON.stringify(this.modules));
 
@@ -187,12 +187,12 @@ export class HomePage implements OnInit {
       };
     this.moduleService.getservicesListSync(getServiceData1, record).subscribe(res => {
     this.data = res;
-    console.log(this.data);
+    // console.log(this.data);
     if (this.data.success === true) {
           this.moduledata = this.data.result.record;
           if (this.moduledata !== null) {
-            console.log('dadad');
-            console.log(this.moduledata);
+            // console.log('dadad');
+            // console.log(this.moduledata);
 
             return this.moduledata;
           }

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of, throwError } from 'rxjs';
 import { HttpClient, HttpErrorResponse} from '@angular/common/http';
 import { catchError, tap, map, } from 'rxjs/operators';
-
+import { environment} from '../../../environments/environment'
 
 @Injectable({
   providedIn: 'root'
@@ -26,11 +26,12 @@ export class HomeService {
     formdata.append('username', moduledata.username);
     formdata.append('password', moduledata.password);
     formdata.append('session', moduledata.session);
+    let url = environment.baseurl
     // http://realestatedemo.biztechnosys.com/
     // http://beml.biztechnosys.com/
     // https://bizuiaccountingcrm.biztechnosys.com/
     // return this.http.post<any>(moduledata.url + '/modules/Mobile/api.php', formdata, options).pipe(
-    return this.http.post<any>('https://bizuiaccountingcrm.biztechnosys.com/modules/Mobile/api.php', formdata, options).pipe(
+    return this.http.post<any>(url, formdata, options).pipe(
       tap((logindata: any) => console.log(`moduledata`)),
       catchError(this.handleError<any>('module'))
     );

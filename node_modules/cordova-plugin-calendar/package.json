@@ -1,0 +1,67 @@
+{
+  "_from": "cordova-plugin-calendar@5.1.6",
+  "_id": "cordova-plugin-calendar@5.1.6",
+  "_inBundle": false,
+  "_integrity": "sha512-aaK5XRHIiR+1AYEwmXbFL98Q/I62OoUMAbxK0DTpICo0M3luihomr0S+YXstDLL0MyIKOB3WtRHVuCP4y97kHw==",
+  "_location": "/cordova-plugin-calendar",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "cordova-plugin-calendar@5.1.6",
+    "name": "cordova-plugin-calendar",
+    "escapedName": "cordova-plugin-calendar",
+    "rawSpec": "5.1.6",
+    "saveSpec": null,
+    "fetchSpec": "5.1.6"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-calendar/-/cordova-plugin-calendar-5.1.6.tgz",
+  "_shasum": "f3aa6dbe50e948653c3ce8952aaf6d5495047fa8",
+  "_spec": "cordova-plugin-calendar@5.1.6",
+  "_where": "D:\\mobileappbiz",
+  "author": {
+    "name": "Eddy Verbruggen",
+    "email": "eddyverbruggen@gmail.com",
+    "url": "https://github.com/EddyVerbruggen"
+  },
+  "bugs": {
+    "url": "https://github.com/EddyVerbruggen/Calendar-PhoneGap-Plugin/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-calendar",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "deprecated": false,
+  "description": "This plugin allows you to manipulate the native calendar.",
+  "engines": {
+    "cordovaDependencies": {
+      "3.0.0": {
+        "cordova-android": ">=6.3.0"
+      }
+    }
+  },
+  "homepage": "https://github.com/EddyVerbruggen/Calendar-PhoneGap-Plugin#readme",
+  "keywords": [
+    "Calendar",
+    "Agenda",
+    "Event",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-calendar",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EddyVerbruggen/Calendar-PhoneGap-Plugin.git"
+  },
+  "version": "5.1.6"
+}
