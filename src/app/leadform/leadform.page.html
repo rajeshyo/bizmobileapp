@@ -98,7 +98,7 @@
                     </div>
 
 
-                    <div *ngIf="lead.type.name =='reference'">
+                    <div *ngIf="lead.type.name =='reference'" >
 
                       <!-- <div *ngIf="lead.type.refersTo[0] == 'Project'">
                         <label class="form-col-form-label" for="inputSuccess2">{{ lead.label }}  <span *ngIf="lead.mandatory == true" class="error"> * </span></label>
@@ -109,11 +109,19 @@
                         </select>
                       </div> -->
 
-                      <div *ngIf="lead.type.refersTo[0] == 'Accounts'">
+                      <!-- <div *ngIf="lead.type.refersTo[0] == 'Accounts'" >
                         <label class="form-col-form-label" for="inputSuccess2">{{ lead.label }}  <span *ngIf="lead.mandatory == true" class="error"> * </span></label>
                         <select  [formControlName]=lead.name name=lead.name class="form-control">
                           <option [value]=vals *ngFor="let vals of lead.type.refersTo;let i = index">
                             {{ vals }}
+                          </option>
+                        </select>
+                      </div> -->
+                      <div *ngIf="lead.type.refersTo[0] == 'Accounts'" (click)="openModel(lead.type.refersTo[0])">
+                        <label class="form-col-form-label" for="inputSuccess2" >{{ lead.label }}  <span *ngIf="lead.mandatory == true" class="error"> * </span></label>
+                        <select  [formControlName]=lead.name name=lead.name class="form-control">
+                          <option [value]=vals *ngFor="let record of recordsdata;let i = index" >
+                            {{ record.firstname|| record.accountname }}
                           </option>
                         </select>
                       </div>
@@ -133,11 +141,11 @@
                           </option>
                         </select>
                       </div>
-                      <div *ngIf="lead.type.refersTo[0] == 'Currency'">
-                        <label class="form-col-form-label" for="inputSuccess2">{{ lead.label }}  <span *ngIf="lead.mandatory == true" class="error"> * </span></label>
+                      <div *ngIf="lead.type.refersTo[0] == 'Currency'" (click)="openModel(lead.type.refersTo[0])">
+                        <label class="form-col-form-label" for="inputSuccess2" >{{ lead.label }}  <span *ngIf="lead.mandatory == true" class="error"> * </span></label>
                         <select  [formControlName]=lead.name name=lead.name class="form-control">
-                          <option [value]=vals *ngFor="let vals of lead.type.refersTo;let i = index">
-                            {{ vals }}
+                          <option [value]=vals *ngFor="let record of recordsdata;let i = index" >
+                            {{ record.firstname }}
                           </option>
                         </select>
                       </div>

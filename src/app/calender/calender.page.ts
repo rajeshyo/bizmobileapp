@@ -83,7 +83,7 @@ onCurrentDateChanged(a){
 
   calenderList() {
 // console.log("formdatanew",this.bizFormData)
-console.log("iodate",this.date)
+// console.log("iodate",this.date)
     const loginData = JSON.parse(localStorage.getItem('logindata'));
     const session = localStorage.getItem('session');
     const options = this.moduleService.callHeader();

@@ -29,6 +29,9 @@ export class LeadformPage implements OnInit {
   modules = [];
   loaddata = 0;
   showSpinner: boolean = true;
+  headers: any;
+  recordsdata: any;
+  modulename: any;
 
   constructor(
     public navCtrl: NavController,
@@ -188,7 +191,37 @@ let ids = Object.keys(this.modules[test_this.k]['type']['picklistValues']['users
       console.log(err);
     });
 }
+openModel(modulename: String){
+  console.log("ll",modulename)
+  const loginData = JSON.parse(localStorage.getItem('logindata'));
+  const session = localStorage.getItem('session');
+  const options = this.moduleService.callHeader();
+  const getServiceData = {
+    url: loginData.url,
+    session,
+    module: modulename,
+    operation: 'listModuleRecords',
+ 
+  };
 
+  this.moduleService.getservicesListSync(getServiceData, options).subscribe(res => {
+    this.data = res;
+    if (this.data.success === true) {
+      if (this.data.result !== null) {
+      
+        this.headers = this.data.result.headers;
+        this.recordsdata = this.data.result.records;
+        console.log("relad",this.recordsdata)
+        let headers = this.modules
+        return this.modules;
+      }
+    } else {
+      console.log(this.data.result.error);
+    }
+  }, (err) => {
+    console.log(err);
+  });
+}
 
 onSubmit(form: NgForm) {
 console.log("formdatanew",this.bizFormData)
