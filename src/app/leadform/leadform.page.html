@@ -100,9 +100,18 @@
 
                     <div *ngIf="lead.type.name =='reference'">
 
-                      <div *ngIf="lead.type.refersTo[0] == 'Accounts'">
+                      <!-- <div *ngIf="lead.type.refersTo[0] == 'Project'">
                         <label class="form-col-form-label" for="inputSuccess2">{{ lead.label }}  <span *ngIf="lead.mandatory == true" class="error"> * </span></label>
                         <select [(ngModel)]="bizFormData[lead.name]" [formControlName]=lead.name name=lead.name class="form-control">
+                          <option [value]=val *ngFor="let val of lead.type.refersTo;let i = index">
+                            {{ val }}
+                          </option>
+                        </select>
+                      </div> -->
+
+                      <div *ngIf="lead.type.refersTo[0] == 'Accounts'">
+                        <label class="form-col-form-label" for="inputSuccess2">{{ lead.label }}  <span *ngIf="lead.mandatory == true" class="error"> * </span></label>
+                        <select  [formControlName]=lead.name name=lead.name class="form-control">
                           <option [value]=vals *ngFor="let vals of lead.type.refersTo;let i = index">
                             {{ vals }}
                           </option>
@@ -110,7 +119,7 @@
                       </div>
                       <div *ngIf="lead.type.refersTo[0] == 'Project'">
                         <label class="form-col-form-label" for="inputSuccess2">{{ lead.label }}  <span *ngIf="lead.mandatory == true" class="error"> * </span></label>
-                        <select [(ngModel)]="bizFormData[lead.name]" [formControlName]=lead.name name=lead.name class="form-control">
+                        <select  [formControlName]=lead.name name=lead.name class="form-control">
                           <option [value]=val *ngFor="let val of lead.type.refersTo;let i = index">
                             {{ val }}
                           </option>
@@ -126,7 +135,7 @@
                       </div>
                       <div *ngIf="lead.type.refersTo[0] == 'Currency'">
                         <label class="form-col-form-label" for="inputSuccess2">{{ lead.label }}  <span *ngIf="lead.mandatory == true" class="error"> * </span></label>
-                        <select [(ngModel)]="bizFormData[lead.name]" [formControlName]=lead.name name=lead.name class="form-control">
+                        <select  [formControlName]=lead.name name=lead.name class="form-control">
                           <option [value]=vals *ngFor="let vals of lead.type.refersTo;let i = index">
                             {{ vals }}
                           </option>
@@ -134,7 +143,7 @@
                       </div>
                       <div *ngIf="lead.type.refersTo[0] == 'Vendors'">
                         <label class="form-col-form-label" for="inputSuccess2">{{ lead.label }}  <span *ngIf="lead.mandatory == true" class="error"> * </span></label>
-                        <select [(ngModel)]="bizFormData[lead.name]" [formControlName]=lead.name name=lead.name class="form-control">
+                        <select  [formControlName]=lead.name name=lead.name class="form-control">
                           <option [value]=vals *ngFor="let vals of lead.type.refersTo;let i = index">
                             {{ vals }}
                           </option>
@@ -145,7 +154,7 @@
 
                       <div *ngIf="lead.type.refersTo[0] == 'Leads'">
                         <label class="form-col-form-label" for="inputSuccess2">{{ lead.label }}  <span *ngIf="lead.mandatory == true" class="error"> * </span></label>
-                        <select [(ngModel)]="bizFormData[lead.name]" [formControlName]=lead.name name=lead.name class="form-control">
+                        <select  [formControlName]=lead.name name=lead.name class="form-control">
                           <option [value]=vals *ngFor="let vals of lead.type.refersTo;let i = index">
                             {{ vals }}
                           </option>
@@ -153,7 +162,7 @@
                       </div>
                       <div *ngIf="lead.type.refersTo[0] == 'PurchaseOrder'">
                         <label class="form-col-form-label" for="inputSuccess2">{{ lead.label }}  <span *ngIf="lead.mandatory == true" class="error"> * </span></label>
-                        <select [(ngModel)]="bizFormData[lead.name]" [formControlName]=lead.name name=lead.name class="form-control">
+                        <select  [formControlName]=lead.name name=lead.name class="form-control">
                           <option [value]=vals *ngFor="let vals of lead.type.refersTo;let i = index">
                             {{ vals }}
                           </option>
@@ -161,7 +170,7 @@
                       </div>
                       <div *ngIf="lead.type.refersTo[0] == 'Quotes'">
                         <label class="form-col-form-label" for="inputSuccess2">{{ lead.label }}  <span *ngIf="lead.mandatory == true" class="error"> * </span></label>
-                        <select [(ngModel)]="bizFormData[lead.name]" [formControlName]=lead.name name=lead.name class="form-control">
+                        <select [formControlName]=lead.name name=lead.name class="form-control">
                           <option [value]=vals *ngFor="let vals of lead.type.refersTo;let i = index">
                             {{ vals }}
                           </option>
@@ -169,7 +178,7 @@
                       </div>
                       <div *ngIf="lead.type.refersTo[0] == 'Invoice'">
                         <label class="form-col-form-label" for="inputSuccess2">{{ lead.label }}  <span *ngIf="lead.mandatory == true" class="error"> * </span></label>
-                        <select [(ngModel)]="bizFormData[lead.name]" [formControlName]=lead.name name=lead.name class="form-control">
+                        <select  [formControlName]=lead.name name=lead.name class="form-control">
                           <option [value]=vals *ngFor="let vals of lead.type.refersTo;let i = index">
                             {{ vals }}
                           </option>
@@ -177,7 +186,7 @@
                       </div>
                       <div *ngIf="lead.type.refersTo[0] == 'Faq'">
                         <label class="form-col-form-label" for="inputSuccess2">{{ lead.label }}  <span *ngIf="lead.mandatory == true" class="error"> * </span></label>
-                        <select [(ngModel)]="bizFormData[lead.name]" [formControlName]=lead.name name=lead.name class="form-control">
+                        <select  [formControlName]=lead.name name=lead.name class="form-control">
                           <option [value]=vals *ngFor="let vals of lead.type.refersTo;let i = index">
                             {{ vals }}
                           </option>
@@ -185,7 +194,7 @@
                       </div>
                       <div *ngIf="lead.type.refersTo[0] == 'HelpDesk'">
                         <label class="form-col-form-label" for="inputSuccess2">{{ lead.label }}  <span *ngIf="lead.mandatory == true" class="error"> * </span></label>
-                        <select [(ngModel)]="bizFormData[lead.name]" [formControlName]=lead.name name=lead.name class="form-control">
+                        <select  [formControlName]=lead.name name=lead.name class="form-control">
                           <option [value]=vals *ngFor="let vals of lead.type.refersTo;let i = index">
                             {{ vals }}
                           </option>
@@ -193,7 +202,7 @@
                       </div>
                       <div *ngIf="lead.type.refersTo[0] == 'ProjectTask'">
                         <label class="form-col-form-label" for="inputSuccess2">{{ lead.label }}  <span *ngIf="lead.mandatory == true" class="error"> * </span></label>
-                        <select [(ngModel)]="bizFormData[lead.name]" [formControlName]=lead.name name=lead.name class="form-control">
+                        <select  [formControlName]=lead.name name=lead.name class="form-control">
                           <option [value]=vals *ngFor="let vals of lead.type.refersTo;let i = index">
                             {{ vals }}
                           </option>
@@ -201,7 +210,7 @@
                       </div>
                       <div *ngIf="lead.type.refersTo[0] == 'Potentials'">
                         <label class="form-col-form-label" for="inputSuccess2">{{ lead.label }}  <span *ngIf="lead.mandatory == true" class="error"> * </span></label>
-                        <select [(ngModel)]="bizFormData[lead.name]" [formControlName]=lead.name name=lead.name class="form-control">
+                        <select  [formControlName]=lead.name name=lead.name class="form-control">
                           <option [value]=vals *ngFor="let vals of lead.type.refersTo;let i = index">
                             {{ vals }}
                           </option>
@@ -209,7 +218,7 @@
                       </div>
                       <div *ngIf="lead.type.refersTo[0] == 'Contacts'">
                         <label class="form-col-form-label" for="inputSuccess2">{{ lead.label }}  <span *ngIf="lead.mandatory == true" class="error"> * </span></label>
-                        <select [(ngModel)]="bizFormData[lead.name]" [formControlName]=lead.name name=lead.name class="form-control">
+                        <select  [formControlName]=lead.name name=lead.name class="form-control">
                           <option [value]=vals *ngFor="let vals of lead.type.refersTo;let i = index">
                             {{ vals }}
                           </option>
@@ -217,7 +226,7 @@
                       </div>
                       <div *ngIf="lead.type.refersTo[0] == 'SalesOrder'">
                         <label class="form-col-form-label" for="inputSuccess2">{{ lead.label }}  <span *ngIf="lead.mandatory == true" class="error"> * </span></label>
-                        <select [(ngModel)]="bizFormData[lead.name]" [formControlName]=lead.name name=lead.name class="form-control">
+                        <select [formControlName]=lead.name name=lead.name class="form-control">
                           <option [value]=vals *ngFor="let vals of lead.type.refersTo;let i = index">
                             {{ vals }}
                           </option>

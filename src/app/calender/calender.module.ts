@@ -7,6 +7,7 @@ import { HeaderService } from '../services/header/header.service';
 import { HttpClientModule  } from '@angular/common/http';
 import { IonicModule } from '@ionic/angular';
 import { CalendarModule } from 'ion2-calendar';
+import { NgCalendarModule  } from 'ionic2-calendar';
 import { CalenderPage } from './calender.page';
 // import { NgCalendarModule  } from 'ionic2-calendar';
 
@@ -24,6 +25,7 @@ const routes: Routes = [
     IonicModule,
     HttpClientModule,
     CalendarModule,
+    NgCalendarModule,
     RouterModule.forChild(routes),
     // NgCalendarModule,
   ],

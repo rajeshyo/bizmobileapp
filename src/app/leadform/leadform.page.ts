@@ -191,7 +191,7 @@ let ids = Object.keys(this.modules[test_this.k]['type']['picklistValues']['users
 
 
 onSubmit(form: NgForm) {
-// console.log("formdatanew",this.bizFormData)
+console.log("formdatanew",this.bizFormData)
     const loginData = JSON.parse(localStorage.getItem('logindata'));
     const session = localStorage.getItem('session');
     const options = this.moduleService.callHeader();

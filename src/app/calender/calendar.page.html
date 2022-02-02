@@ -10,16 +10,42 @@
 </ion-header>
 <!--Rajesh Saha-->
 <ion-content  >
-   <div class="ion-padding">
- 
-     <ion-calendar [(ngModel)]="dateMulti"
-         [options]="optionsMulti"
-         [type]="type"
-         [format]="'YYYY-MM-DD'">
-     </ion-calendar>
-     
-   </div>
+   <!-- <div class="ion-padding">
+      <form [formGroup]="onLeadForm" (submit)="onSubmit(onLeadForm.value)"> -->
 
+      <!-- <ion-calendar [(ngModel)]="bizFormData"
+      (onChange)="onChange($event)"
+      [type]="type"
+      [format]="'DD-MM-YYYY'"
+      (click)="calenderList()">
+    </ion-calendar> -->
+
+   <!-- </form>
+</div>  -->
+
+<div>
+   <h2 style="align-items: center;">{{viewTitle}}</h2>
+
+</div>
+<ion-segment [(ngModel)]="calendar.mode">
+<ion-segment-button value="month">
+<ion-label>Month</ion-label>
+</ion-segment-button>
+<ion-segment-button value="week">
+   <ion-label>Week</ion-label>
+   </ion-segment-button>
+   <ion-segment-button value="day">
+      <ion-label>Day</ion-label>
+      </ion-segment-button>
+</ion-segment>
+   <calendar [eventSource]="eventSource"
+   [calendarMode]="calendar.mode"
+   [currentDate]="calendar.currentDate"
+   (onTitleChanged)="onViewTitleChanged($event)"
+   (onCurrentDateChanged)="onCurrentDateChanged($event)"
+   >
+   
+</calendar>
 
    <ion-item-sliding #slidingItem id="item100"  style="background-color:#dbdddb; border-radius: 10px;">
  

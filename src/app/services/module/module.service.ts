@@ -80,4 +80,24 @@ export class ModuleService {
     );
   }
 
+  calender(moduledata, options): Observable<any> {
+    const formdata = new FormData();
+    formdata.append('_operation',  moduledata.operation);
+    formdata.append('_session', moduledata.session);
+    formdata.append('module', moduledata.module);
+    formdata.append('search_key', moduledata.search_key);
+    formdata.append('search_value', moduledata.search_value);
+    formdata.append('operator', moduledata.operator);
+
+
+    let url = environment.baseurl
+    // http://realestatedemo.biztechnosys.com/
+    // http://beml.biztechnosys.com/
+    // https://bizuiaccountingcrm.biztechnosys.com/
+    // return this.http.post<any>(moduledata.url + '/modules/Mobile/api.php', formdata, options).pipe(
+    return this.http.post<any>(url, formdata, options).pipe(
+      tap((logindata: any) => console.log(`moduledata`)),
+      catchError(this.handleError<any>('module'))
+    );
+  }
 }

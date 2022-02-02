@@ -28,6 +28,7 @@
     "color": "^4.1.0",
     "httpclient": "^0.1.0",
     "ion2-calendar": "^3.0.0-rc.0",
+    "ionic2-calendar": "^0.6.9",
     "moment": "^2.29.1",
     "ngx-avatar": "^4.1.0",
     "rxjs": "~6.6.0",

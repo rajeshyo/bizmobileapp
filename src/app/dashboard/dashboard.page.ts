@@ -5,7 +5,7 @@ import { NavController, MenuController, ToastController, AlertController, Loadin
 import { ModuleService } from '../services/module/module.service';
 // import { HeaderService } from '../services/header/header.service';
 import { count } from 'rxjs/operators';
-
+import { Router } from '@angular/router';
 declare var google;
 
 @Component({
@@ -23,6 +23,7 @@ export class DashboardPage implements OnInit {
   salesorder = [];
   contact = [];
   constructor(
+    private router: Router,
     public navCtrl: NavController,
     public menuCtrl: MenuController,
     public loadingCtrl: LoadingController,
@@ -40,8 +41,25 @@ export class DashboardPage implements OnInit {
     this.salesorderList();
     this.contactList();
     // this.showChart();
+  } 
+  link1(){
+    this.router.navigate(['/leads/Potentials']);
   }
-
+  link2(){
+    this.router.navigate(['/leads/Accounts']);
+  }
+  link3(){
+    this.router.navigate(['/leads/PriceBooks']);
+  }
+  link4(){
+    this.router.navigate(['/leads/Vendors']);
+  }
+  link5(){
+    this.router.navigate(['/leads/Leads']);
+  }
+  link6(){
+    this.router.navigate(['/leads/Contacts']);
+  }
   opportunitiesList() {
       const loginData = JSON.parse(localStorage.getItem('logindata'));
       const session = localStorage.getItem('session');
@@ -151,7 +169,7 @@ salesorderList() {
   const getServiceData = {
     url : loginData.url,
     session,
-    module : 'Payment',
+    module : 'Leads',
      // record : this.id,
      operation: 'listModuleRecords',
   };
