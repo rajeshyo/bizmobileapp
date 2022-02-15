@@ -7,6 +7,7 @@ import { ToastService } from '../services/toast/toast.service';
 import { CalendarComponent, CalendarComponentOptions } from 'ion2-calendar'
 import {  FormGroup, Validators , NgForm } from '@angular/forms';
 import * as moment from 'moment';
+import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-calender',
   templateUrl: './calendar.page.html',
@@ -39,8 +40,11 @@ export class CalenderPage implements OnInit {
   };
 
 @ViewChild(CalendarComponent) myCal: CalendarComponent;
+  router: any;
 
   constructor(
+    private activatedRoute : ActivatedRoute,
+    public Router: Router,
     public navCtrl: NavController,
     public menuCtrl: MenuController,
     public loadingCtrl: LoadingController,
@@ -62,7 +66,12 @@ export class CalenderPage implements OnInit {
 //     this.myCal.slideNext();
 // }
 
-
+addevent(){
+  this.Router.navigateByUrl('leadform?name=Events');
+}
+addtask(){
+  this.Router.navigateByUrl('leadform?name=Tasks');
+}
 onViewTitleChanged(title) {
   this.viewTitle = title;
 }
@@ -71,7 +80,7 @@ onCurrentDateChanged(a){
   console.log("Date",this.viewDate)
    this.date = moment(a).format("YYYY-MM-DD");
   console.log("new date",this.date)
-  return this.date;
+  this.calenderList();
 }
 
 
@@ -83,7 +92,8 @@ onCurrentDateChanged(a){
 
   calenderList() {
 // console.log("formdatanew",this.bizFormData)
-// console.log("iodate",this.date)
+  console.log("iodate",this.date)
+  //  document.write("opo",this.date)
     const loginData = JSON.parse(localStorage.getItem('logindata'));
     const session = localStorage.getItem('session');
     const options = this.moduleService.callHeader();
@@ -93,7 +103,7 @@ onCurrentDateChanged(a){
       module : 'Calendar',
       operation: 'listModuleRecords',
       search_key: 'date_start',
-      search_value: '2022-01-28',
+      search_value: this.date,
       operator: 'e',
     };
 

@@ -3,9 +3,11 @@
      <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
      </ion-buttons>
-     <ion-title>
+     <!-- <ion-title>
         Calendar
-     </ion-title>
+     </ion-title> -->  
+     <ion-button (click)="addtask()">Add Task</ion-button>
+     <ion-button (click)="addevent()">Add Event</ion-button>
   </ion-toolbar>
 </ion-header>
 <!--Rajesh Saha-->
@@ -49,34 +51,23 @@
 
    <ion-item-sliding #slidingItem id="item100"  style="background-color:#dbdddb; border-radius: 10px;">
  
-     
-      <h4>All List</h4>
-      <!-- <ion-item> -->
-         <div *ngFor="let header of modules;let i = index">
-            
-          <li>{{ header.subject}}</li>  
-               <!-- <a routerLink="/leadsdetails/{{ record.id }}" class="alllink" > -->
-                  
-                  <!-- <div class="headerlabel"> 
-                     {{ header.subject}}
-                  </div>
-                  <div  class="headervalue">
-                     {{ record[header.time_start]}}
-                  </div> -->
-                
-               <!-- </a> -->
-          
-         </div>
-      <!-- </ion-item> -->
+     <div class="event">
+      <h4>All Event List</h4>
+      <span *ngFor="let header of modules;let i = index">       
+       <li>{{ header.subject}}</li>    
+      </span>
+     </div>
+      
  
-      <ion-fab vertical="bottom" class="addbutton" horizontal="end" slot="fixed" (click)="form(modulename)">
+ 
+      <!-- <ion-fab vertical="bottom" class="addbutton" horizontal="end" slot="fixed" (click)="form(modulename)"> -->
          <!-- <a routerLink="/leadform" > -->
-            <ion-fab-button>
-               <ion-icon name="add" style="color:white;"></ion-icon> 
+            <!-- <ion-fab-button> -->
+               <!-- <ion-icon name="add" style="color:white;"></ion-icon>  -->
                <!-- ADD -->
-            </ion-fab-button>
+            <!-- </ion-fab-button> -->
          <!-- </a> -->
-      </ion-fab>
+      <!-- </ion-fab> -->
   <ion-item-options side="end">
      <ion-button fill="clear" 
      (click)="slidingclose(slidingItem)" (click)="leadsdeleteList(record.id)" (click)="refresh($event)" style="height: 48px;" >

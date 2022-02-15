@@ -11,3 +11,15 @@
 .monthview-container{
     height: auto!important;
   }
+.event{
+    padding: 17px;
+}
+  :host ::ng-deep {
+      .event-detail-container {
+          display: none;
+      }
+
+      .monthview-container {
+          height: auto !important;
+      }
+  }

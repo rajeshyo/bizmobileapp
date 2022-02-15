@@ -38,8 +38,10 @@
               <div class="card-body was-validated">
               
                 <div class="form-group" *ngFor="let lead of modules;let i = index">
-                  <div>
-
+                  <div *ngIf="(lead.displaytype !=='2' && lead.displaytype !=='3')">
+                    <span *ngIf="(lead.uitype !=='4' )">
+                    <!-- ({{lead.displaytype}}  ? '$2.00' : '$10.00') -->
+                   
                     <!-- This is new design inputbox style -->
                   <!-- <div *ngIf="lead.type.name =='text'">
                     <ion-item>
@@ -273,7 +275,9 @@
                     </div>
 
                     
-                  </div>
+                 
+                  </span>
+                 </div>
                 </div>
               </div>
             </div>
