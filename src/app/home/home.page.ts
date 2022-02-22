@@ -131,6 +131,62 @@ export class HomePage implements OnInit {
       title: 'Emails',
       icon: 'aica_emails'
     },
+    {
+      title: 'ITS4YouKanbanView',
+      icon: 'aica_emails'
+    },
+    {
+      title: 'ModComments',
+      icon: 'aica_emails'
+    },
+    {
+      title: 'CTAttendance',
+      icon: 'aica_emails'
+    },
+    {
+      title: 'BankGuarantee',
+      icon: 'aica_emails'
+    },
+    {
+      title: 'Equipment',
+      icon: 'aica_emails'
+    },
+    {
+      title: 'ITS4YouHeaderStatusBar',
+      icon: 'aica_emails'
+    },
+    {
+      title: 'CTMessageTemplate',
+      icon: 'aica_emails'
+    },
+    {
+      title: 'ITS4YouMultiCompany',
+      icon: 'aica_emails'
+    },
+    {
+      title: 'CTTimeTracker',
+      icon: 'aica_emails'
+    },
+    {
+      title: 'CTRouteAttendance',
+      icon: 'aica_emails'
+    },
+    {
+      title: 'CTTimeControl',
+      icon: 'aica_emails'
+    },
+    {
+      title: 'CTRoutePlanning',
+      icon: 'aica_emails'
+    },
+    {
+      title: 'CTUserFilterView',
+      icon: 'aica_emails'
+    },
+    {
+      title: 'CTPushNotification',
+      icon: 'aica_emails'
+    },
   ];
   constructor(
     public navCtrl: NavController,
