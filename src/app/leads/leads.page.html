@@ -11,52 +11,59 @@
   </ion-toolbar>
 </ion-header>
 <!--Rajesh Saha-->
-<br>
-<ion-content *ngFor="let record of recordsdata;let i = index">
+<!-- <br> -->
+
+
+
+   <ion-content >
+      <div class="listdata" style="min-height: 100px !important;" *ngFor="let record of recordsdata;let i = index">
   <!-- <ion-searchbar (ionInput)="getTopics($event)"></ion-searchbar> -->
-  <!-- <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="setFilteredItems()"></ion-searchbar> -->
-  <ion-spinner  *ngIf="showSpinner" color="primary" name="lines" class="addbutton" ></ion-spinner>
-  <ion-fab vertical="bottom" class="addbutton" horizontal="end" slot="fixed" (click)="form(modulename)">
-     <!-- <a routerLink="/leadform" > -->
-        <ion-fab-button>
-           <ion-icon name="add" style="color:white;"></ion-icon> 
-           <!-- ADD -->
-        </ion-fab-button>
-     <!-- </a> -->
-  </ion-fab>
-  <ion-item-sliding #slidingItem id="item100"  style="background-color:#dbdddb; border-radius: 10px;">
- 
+      <!-- <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="setFilteredItems()"></ion-searchbar> -->
+      <ion-spinner  *ngIf="showSpinner" color="primary" name="lines" class="addbutton" ></ion-spinner>
+      <ion-fab vertical="bottom" class="addbutton" horizontal="end" slot="fixed" (click)="form(modulename)">
+         <!-- <a routerLink="/leadform" > -->
+            <ion-fab-button>
+               <ion-icon name="add" style="color:white;"></ion-icon> 
+               <!-- ADD -->
+            </ion-fab-button>
+         <!-- </a> -->
+      </ion-fab>
+      <ion-item-sliding #slidingItem id="item100"  style="background-color:#dbdddb; border-radius: 10px;">
      
+         
+        
+             <ion-item>
+                <div *ngFor="let header of headers;let i = index" (click)="go(modulename,record.id)">
+                 
+                      <!-- <a routerLink="/leadsdetails/{{ record.id }}" class="alllink" > -->
+                         <div class="headerlabel"> 
+                            {{ header.label}}
+                         </div>
+                         <div  class="headervalue">
+                            {{ record[header.name]}}
+                         </div>
+                       
+                      <!-- </a> -->
+                 
+                </div>
+             </ion-item>
+        
+      
+         <ion-item-options side="end">
+            <ion-button fill="clear" 
+            (click)="slidingclose(slidingItem)" (click)="leadsdeleteList(record.id)" (click)="refresh($event)" style="height: 48px;" >
+            <ion-icon slot="icon-only" color="danger" name="trash" size="small"></ion-icon>
+            delete
+            </ion-button> 
+            <div class="vl"></div>
+            <ion-button fill="clear" (click)="slidingclose(slidingItem)" (click)="formedit(modulename,record.id)" style="height: 48px;">
+               <ion-icon color="warning" slot="icon-only" name="create" size="small" ></ion-icon>
+               edit
+            </ion-button>
+         </ion-item-options>
+      </ion-item-sliding>
+      </div>
     
-         <ion-item>
-            <div *ngFor="let header of headers;let i = index" (click)="go(modulename,record.id)">
-             
-                  <!-- <a routerLink="/leadsdetails/{{ record.id }}" class="alllink" > -->
-                     <div class="headerlabel"> 
-                        {{ header.label}}
-                     </div>
-                     <div  class="headervalue">
-                        {{ record[header.name]}}
-                     </div>
-                   
-                  <!-- </a> -->
-             
-            </div>
-         </ion-item>
-    
-  
-     <ion-item-options side="end">
-        <ion-button fill="clear" 
-        (click)="slidingclose(slidingItem)" (click)="leadsdeleteList(record.id)" (click)="refresh($event)" style="height: 48px;" >
-        <ion-icon slot="icon-only" color="danger" name="trash" size="small"></ion-icon>
-        delete
-        </ion-button> 
-        <div class="vl"></div>
-        <ion-button fill="clear" (click)="slidingclose(slidingItem)" (click)="formedit(modulename,record.id)" style="height: 48px;">
-           <ion-icon color="warning" slot="icon-only" name="create" size="small" ></ion-icon>
-           edit
-        </ion-button>
-     </ion-item-options>
-  </ion-item-sliding>
-  <!--Rajesh Saha-->
-</ion-content>
+      <!--Rajesh Saha-->
+    </ion-content>
+
