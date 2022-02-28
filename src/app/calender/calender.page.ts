@@ -65,12 +65,17 @@ export class CalenderPage implements OnInit {
 //   Next() {
 //     this.myCal.slideNext();
 // }
-
+go(moduleid: string,){
+  console.log("uuuuuu",moduleid)
+  const sampleid : any = "989809809";
+  const name : any = "Calendar";
+  this.Router.navigateByUrl('leadsdetails?id='+moduleid+'&name='+name);
+}
 addevent(){
   this.Router.navigateByUrl('leadform?name=Events');
 }
 addtask(){
-  this.Router.navigateByUrl('leadform?name=Tasks');
+  this.Router.navigateByUrl('leadform?name=Calendar');
 }
 onViewTitleChanged(title) {
   this.viewTitle = title;

@@ -16,18 +16,25 @@
 
 
    <ion-content >
+    
+   <ion-fab vertical="bottom" class="addbutton" horizontal="end" slot="fixed" (click)="form(modulename)">
+         <ion-fab-button>
+            <ion-icon name="add" style="color:white;"></ion-icon> 
+         </ion-fab-button>
+   </ion-fab>
+
       <div class="listdata" style="min-height: 100px !important;" *ngFor="let record of recordsdata;let i = index">
   <!-- <ion-searchbar (ionInput)="getTopics($event)"></ion-searchbar> -->
       <!-- <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="setFilteredItems()"></ion-searchbar> -->
       <ion-spinner  *ngIf="showSpinner" color="primary" name="lines" class="addbutton" ></ion-spinner>
-      <ion-fab vertical="bottom" class="addbutton" horizontal="end" slot="fixed" (click)="form(modulename)">
-         <!-- <a routerLink="/leadform" > -->
+      <!-- <ion-fab vertical="bottom" class="addbutton" horizontal="end" slot="fixed" (click)="form(modulename)">
+        
             <ion-fab-button>
                <ion-icon name="add" style="color:white;"></ion-icon> 
-               <!-- ADD -->
+              
             </ion-fab-button>
-         <!-- </a> -->
-      </ion-fab>
+        
+      </ion-fab> -->
       <ion-item-sliding #slidingItem id="item100"  style="background-color:#dbdddb; border-radius: 10px;">
      
          
@@ -41,6 +48,7 @@
                          </div>
                          <div  class="headervalue">
                             {{ record[header.name]}}
+                            <!-- {{record.firstname}} -->
                          </div>
                        
                       <!-- </a> -->

@@ -250,7 +250,7 @@ console.log("formdatanew",this.bizFormData)
               // this.navCtrl.navigateRoot('/leads/{{mainmodulename}}');
               this.router.navigateByUrl('/leads/'+this.mainmodulename);
               } else {
-                this.toastService.presentToast('Something Wrong');
+                this.toastService.presentToast(this.data.error.message);
               }
           } else {
               this.toastService.presentToast('Something Wrong');
@@ -276,9 +276,9 @@ console.log("formdatanew",this.bizFormData)
               // this.navCtrl.navigateRoot('/leads/{{this.mainmodulename}}');
               this.router.navigateByUrl('/leads/'+this.mainmodulename);
               }
-              // else {
-                // this.toastService.presentToast('Something Wrong');
-              // }
+              else {
+                this.toastService.presentToast(this.data.error.message);
+              }
           }
           // else {
               // this.toastService.presentToast('Something Wrong');

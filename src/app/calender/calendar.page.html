@@ -35,10 +35,10 @@
 </ion-segment-button>
 <ion-segment-button value="week">
    <ion-label>Week</ion-label>
-   </ion-segment-button>
+</ion-segment-button>
    <ion-segment-button value="day">
       <ion-label>Day</ion-label>
-      </ion-segment-button>
+   </ion-segment-button>
 </ion-segment>
    <calendar [eventSource]="eventSource"
    [calendarMode]="calendar.mode"
@@ -54,7 +54,7 @@
      <div class="event">
       <h4>All Event List</h4>
       <span *ngFor="let header of modules;let i = index">       
-       <li>{{ header.subject}}</li>    
+       <li (click)="go(header.activityid)">{{ header.subject}}</li>    
       </span>
      </div>
       

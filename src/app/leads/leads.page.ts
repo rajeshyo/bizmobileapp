@@ -103,7 +103,7 @@ formedit(modulename: string,moduleid: string,){
           this.headers = this.data.result.headers;
           this.recordsdata = this.data.result.records;
 
-          // console.log(this.modules);
+          console.log(this.recordsdata);
 
 
           // const array1 = this.modules;
